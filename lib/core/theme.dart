@@ -59,6 +59,7 @@ TextTheme textDesktopTheme() => TextTheme(
     fontSize: 40.sp,
     fontWeight: FontWeight.w500,
     color: textPrimaryColor,
+    letterSpacing: -3.sp,
   ),
   labelMedium: GoogleFonts.inter(
     fontSize: 22.sp,
