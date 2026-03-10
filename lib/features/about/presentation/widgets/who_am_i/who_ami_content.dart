@@ -2,13 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/theme.dart';
-import '../bullet_list.dart';
+import '../../../../../shared/presentation/widgets/bullet_list.dart';
 
 class WhoAmiContent extends StatelessWidget {
   const WhoAmiContent({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final responsibilities = [
+      'Build cross-platform mobile applications with Flutter',
+      'Design scalable architecture using Clean Architecture principles',
+      'Integrate REST APIs, WebSockets and third-party SDKs',
+      'Optimize performance and maintain application stability',
+    ];
+
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 45.w, horizontal: 36.0),
       child: Column(
@@ -43,7 +50,7 @@ class WhoAmiContent extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 80.0),
-            child: BulletList(),
+            child: BulletList(list: responsibilities,),
           ),
         ],
       ),

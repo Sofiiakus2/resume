@@ -16,7 +16,7 @@ class EducationContent extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.transparent, backgroundPrimaryColor],
+          colors: [Colors.transparent, Color(0xffcbcbcb)],
         ),
       ),
       child: Column(

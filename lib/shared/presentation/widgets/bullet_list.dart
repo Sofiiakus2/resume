@@ -1,31 +1,29 @@
+import 'package:cv_portfolio/core/theme.dart';
 import 'package:flutter/material.dart';
 
 class BulletList extends StatefulWidget {
-  const BulletList({super.key});
+  final List<String> list;
+  final Color? color;
+
+  const BulletList({super.key, required this.list, this.color = textPrimaryColor});
 
   @override
   State<BulletList> createState() => _BulletListState();
 }
 
 class _BulletListState extends State<BulletList> {
-  final responsibilities = [
-    'Build cross-platform mobile applications with Flutter',
-    'Design scalable architecture using Clean Architecture principles',
-    'Integrate REST APIs, WebSockets and third-party SDKs',
-    'Optimize performance and maintain application stability',
-  ];
 
   @override
   Widget build(BuildContext context) {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: responsibilities
+      children: widget.list
           .map((item) => Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('• ', style: Theme.of(context).textTheme.bodyMedium),
+          Text('• ', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: widget.color)),
           Expanded(
-            child: Text(item, style: Theme.of(context).textTheme.bodyMedium),
+            child: Text(item, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: widget.color)),
           ),
         ],
       ))
