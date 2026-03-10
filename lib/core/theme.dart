@@ -20,7 +20,7 @@ ThemeData lightTheme() => ThemeData(
     scrolledUnderElevation: 0.0,
   ),
   dividerColor: textBlackColor,
-  scaffoldBackgroundColor: backgroundPrimaryColor,
+  scaffoldBackgroundColor: Colors.transparent,
   colorScheme: ColorScheme.fromSeed(
     seedColor: primaryColor,
     brightness: Brightness.light,
@@ -79,6 +79,12 @@ TextTheme textDesktopTheme() => TextTheme(
     fontWeight: FontWeight.w700,
     color: textPrimaryColor,
     letterSpacing: -5.sp,
+  ),
+  bodySmall: GoogleFonts.inter(
+    fontSize: 48.sp,
+    fontWeight: FontWeight.w300,
+    color: textPrimaryColor,
+    letterSpacing: -4.sp,
   ),
   bodyMedium: GoogleFonts.inter(
     fontSize: 50.sp,

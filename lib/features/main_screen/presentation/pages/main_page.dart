@@ -26,6 +26,7 @@ class _MainPageState extends State<MainPage> {
     return SizedBox(
       height: 960,
       child: Scaffold(
+        backgroundColor: backgroundPrimaryColor,
         body: Padding(
           padding: const EdgeInsets.only(left: 70.0),
           child: SingleChildScrollView(
