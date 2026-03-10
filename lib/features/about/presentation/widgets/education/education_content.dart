@@ -1,8 +1,10 @@
+import 'package:cv_portfolio/core/theme.dart';
+import 'package:cv_portfolio/features/about/presentation/bloc/education_cubit.dart';
+import 'package:cv_portfolio/features/about/presentation/bloc/education_state.dart';
 import 'package:cv_portfolio/features/about/presentation/widgets/education/education_row.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../core/theme.dart';
 
 class EducationContent extends StatelessWidget {
   const EducationContent({super.key});
@@ -31,25 +33,22 @@ class EducationContent extends StatelessWidget {
             textAlign: TextAlign.end,
           ),
           SizedBox(height: 43.h),
-          EducationRow(
-              years: '2019 - 2021',
-              university: 'Taras Shevchenko National University of Kyiv',
-              degree: 'Computer Software Engineering, Junior Bachelor',
-              logoPath: 'assets/uni/tsnu.png',
-              logoSize: 300.w,
-              spacing: 30.w,
-              imageFirst: true,
-              crossAxis: CrossAxisAlignment.start
-          ),
-          EducationRow(
-              years: '2021 - 2025',
-              university: 'Yuriy Fedkovych Chernivtsi National University',
-              degree: 'Computer Software Engineering, Bachelor',
-              logoPath: 'assets/uni/chnu.png',
-              logoSize: 500.w,
-              spacing: 0.w,
-              imageFirst: false,
-              crossAxis: CrossAxisAlignment.end
+          BlocBuilder<EducationCubit, EducationState>(
+            builder: (context, state) => switch (state) {
+              EducationInitial() => const SizedBox.shrink(),
+              EducationLoaded(:final education) => Column(
+                children: education.map((e) => EducationRow(
+                  years: e.years,
+                  university: e.university,
+                  degree: e.degree,
+                  logoPath: e.logoPath,
+                  logoSize: e.logoSize,
+                  spacing: e.spacing,
+                  imageFirst: e.imageFirst,
+                  crossAxis: e.crossAxis,
+                )).toList(),
+              ),
+            },
           ),
         ],
       ),
