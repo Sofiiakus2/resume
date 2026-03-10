@@ -1,6 +1,6 @@
 import 'package:cv_portfolio/core/theme.dart';
-import 'package:cv_portfolio/features/about/presentation/bloc/education_cubit.dart';
-import 'package:cv_portfolio/features/about/presentation/bloc/education_state.dart';
+import 'package:cv_portfolio/features/about/presentation/bloc/education/education_cubit.dart';
+import 'package:cv_portfolio/features/about/presentation/bloc/education/education_state.dart';
 import 'package:cv_portfolio/features/about/presentation/widgets/education/education_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

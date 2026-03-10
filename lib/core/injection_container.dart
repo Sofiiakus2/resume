@@ -1,10 +1,15 @@
 import 'package:get_it/get_it.dart';
 
 import '../features/about/data/datasources/local/education_local_datasource.dart';
+import '../features/about/data/datasources/local/who_ami_local_datasource.dart';
 import '../features/about/data/repository/education_repository_impl.dart';
+import '../features/about/data/repository/who_ami_repository_impl.dart';
 import '../features/about/domain/repository/education_repository.dart';
+import '../features/about/domain/repository/who_ami_repository.dart';
 import '../features/about/domain/usecases/get_education.dart';
-import '../features/about/presentation/bloc/education_cubit.dart';
+import '../features/about/domain/usecases/get_who_ami_usecase.dart';
+import '../features/about/presentation/bloc/education/education_cubit.dart';
+import '../features/about/presentation/bloc/who_ami/who_ami_cubit.dart';
 import '../features/experience/data/datasource/local/experience_local_datasource.dart';
 import '../features/experience/data/repository/experience_repository_impl.dart';
 import '../features/experience/domain/repository/experience_repository.dart';
@@ -14,6 +19,15 @@ import '../features/experience/presentation/bloc/experience_cubit.dart';
 final sl = GetIt.instance;
 
 Future<void> initDI() async{
+  ///whoAmI
+  sl.registerFactory(() => WhoAmiCubit(sl()));
+  sl.registerLazySingleton(() => GetWhoAmiUsecase(sl()));
+  sl.registerLazySingleton<WhoAmiRepository>(
+        () => WhoAmiRepositoryImpl(sl()),
+  );
+  sl.registerLazySingleton<WhoAmiLocalDatasource>(
+        () => const WhoAmiLocalDatasourceImpl(),
+  );
   ///education
   sl.registerFactory(() => EducationCubit(sl()));
   sl.registerLazySingleton(() => GetEducationUsecase(sl()));

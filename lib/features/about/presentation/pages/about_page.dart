@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/injection_container.dart';
-import '../bloc/education_cubit.dart';
+import '../bloc/education/education_cubit.dart';
+import '../bloc/who_ami/who_ami_cubit.dart';
 import '../widgets/who_am_i/blur_effect.dart';
 import '../widgets/who_am_i/who_ami_content.dart';
 
@@ -21,7 +22,10 @@ class AboutMe extends StatelessWidget {
           BlurEffect(),
           Column(
             children: [
-              WhoAmiContent(),
+              BlocProvider(
+                create: (_) => sl<WhoAmiCubit>(),
+                child: const WhoAmiContent(),
+              ),
               BlocProvider(
                 create: (_) => sl<EducationCubit>(),
                 child: const EducationContent(),
