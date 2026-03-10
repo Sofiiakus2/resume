@@ -9,7 +9,7 @@ class NavigationPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
+      height: 80,
       child: Scaffold(
         backgroundColor: primaryColor,
         body: Padding(

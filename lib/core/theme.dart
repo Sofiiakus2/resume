@@ -72,6 +72,7 @@ TextTheme textDesktopTheme() => TextTheme(
     fontSize: 80.sp,
     fontWeight: FontWeight.w700,
     color: textBlackColor,
+    letterSpacing: -8.sp,
   ),
   headlineMedium: GoogleFonts.inter(
     fontSize: 60.sp,
@@ -83,5 +84,6 @@ TextTheme textDesktopTheme() => TextTheme(
     fontSize: 50.sp,
     fontWeight: FontWeight.w400,
     color: textPrimaryColor,
+    letterSpacing: -4.sp,
   ),
 );
