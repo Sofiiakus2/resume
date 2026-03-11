@@ -80,6 +80,12 @@ TextTheme textDesktopTheme() => TextTheme(
     color: textPrimaryColor,
     letterSpacing: -5.sp,
   ),
+  headlineSmall: GoogleFonts.inter(
+    fontSize: 48.sp,
+    fontWeight: FontWeight.w700,
+    color: textBlackColor,
+    letterSpacing: -5.sp,
+  ),
   bodySmall: GoogleFonts.inter(
     fontSize: 48.sp,
     fontWeight: FontWeight.w300,

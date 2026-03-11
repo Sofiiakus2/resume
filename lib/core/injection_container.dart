@@ -15,6 +15,11 @@ import '../features/experience/data/repository/experience_repository_impl.dart';
 import '../features/experience/domain/repository/experience_repository.dart';
 import '../features/experience/domain/usecases/get_experience.dart';
 import '../features/experience/presentation/bloc/experience_cubit.dart';
+import '../features/skills/data/datasources/local/skills_local_datasource.dart';
+import '../features/skills/data/repository/skills_repository_impl.dart';
+import '../features/skills/domain/reporitory/skills_repository.dart';
+import '../features/skills/domain/usecases/get_skills.dart';
+import '../features/skills/presentation/bloc/skills_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -46,5 +51,15 @@ Future<void> initDI() async{
   );
   sl.registerLazySingleton<ExperienceLocalDatasource>(
         () => const ExperienceLocalDatasourceImpl(),
+  );
+
+  ///skills
+  sl.registerFactory(() => SkillsCubit(sl()));
+  sl.registerLazySingleton(() => GetSkillsUsecase(sl()));
+  sl.registerLazySingleton<SkillsRepository>(
+        () => SkillsRepositoryImpl(sl()),
+  );
+  sl.registerLazySingleton<SkillsLocalDatasource>(
+        () => const SkillsLocalDatasourceImpl(),
   );
 }
