@@ -12,6 +12,7 @@ class ExperienceSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       bottom: 0,
+      left: 70.w,
       child: Row(
         spacing: 10.w,
         crossAxisAlignment: CrossAxisAlignment.end,

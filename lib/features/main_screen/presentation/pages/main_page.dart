@@ -27,19 +27,34 @@ class _MainPageState extends State<MainPage> {
       height: 960,
       child: Scaffold(
         backgroundColor: backgroundPrimaryColor,
-        body: Padding(
-          padding: const EdgeInsets.only(left: 70.0),
-          child: SingleChildScrollView(
-            child: Stack(
-              children: [
-                const SizedBox(height: 960, width: 1920),
-                NameSection(textTheme: textTheme),
-                PhotoSector(),
-                EnglishLevel(textTheme: textTheme, topPosition: topPosition),
-                ResumeSection(textTheme: textTheme, topPosition: topPosition),
-                ExperienceSection(textTheme: textTheme),
-              ],
-            ),
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              const SizedBox(height: 960, width: 1920),
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: Alignment.center,
+                      radius: 1.2,
+                      colors: [
+                        Colors.transparent,
+                        Colors.black.withOpacity(0.6),
+                      ],
+                      stops: const [0.5, 1.0],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 70.0.w),
+                child: NameSection(textTheme: textTheme),
+              ),
+              PhotoSector(),
+              EnglishLevel(textTheme: textTheme, topPosition: topPosition),
+              ResumeSection(textTheme: textTheme, topPosition: topPosition),
+              ExperienceSection(textTheme: textTheme),
+            ],
           ),
         ),
       ),

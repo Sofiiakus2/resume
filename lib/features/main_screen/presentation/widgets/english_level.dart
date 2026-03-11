@@ -14,7 +14,7 @@ class EnglishLevel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: topPosition,
-      left: 0,
+      left: 70.w,
       child: Row(
         spacing: 10.w,
         crossAxisAlignment: CrossAxisAlignment.end,
