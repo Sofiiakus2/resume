@@ -10,6 +10,11 @@ import '../features/about/domain/usecases/get_education.dart';
 import '../features/about/domain/usecases/get_who_ami_usecase.dart';
 import '../features/about/presentation/bloc/education/education_cubit.dart';
 import '../features/about/presentation/bloc/who_ami/who_ami_cubit.dart';
+import '../features/contacts/data/datasource/contact_local_datasource.dart';
+import '../features/contacts/data/repository/contact_repository_impl.dart';
+import '../features/contacts/domain/repository/contact_repository.dart';
+import '../features/contacts/domain/usecases/get_contact.dart';
+import '../features/contacts/presentation/bloc/contact_cubit.dart';
 import '../features/experience/data/datasource/local/experience_local_datasource.dart';
 import '../features/experience/data/repository/experience_repository_impl.dart';
 import '../features/experience/domain/repository/experience_repository.dart';
@@ -61,5 +66,15 @@ Future<void> initDI() async{
   );
   sl.registerLazySingleton<SkillsLocalDatasource>(
         () => const SkillsLocalDatasourceImpl(),
+  );
+
+  ///contacts
+  sl.registerFactory(() => ContactCubit(sl()));
+  sl.registerLazySingleton(() => GetContactUsecase(sl()));
+  sl.registerLazySingleton<ContactRepository>(
+        () => ContactRepositoryImpl(sl()),
+  );
+  sl.registerLazySingleton<ContactLocalDatasource>(
+        () => const ContactLocalDatasourceImpl(),
   );
 }
