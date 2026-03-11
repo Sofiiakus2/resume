@@ -98,4 +98,25 @@ TextTheme textDesktopTheme() => TextTheme(
     color: textPrimaryColor,
     letterSpacing: -4.sp,
   ),
+  displayLarge: GoogleFonts.anton(
+    fontSize: 200.sp,
+    letterSpacing: -3.sp,
+    fontWeight: FontWeight.w400,
+    color: primaryColor,
+  ),
+    displayMedium: GoogleFonts.anton(
+      fontSize: 60.sp,
+      letterSpacing: -3.sp,
+      fontWeight: FontWeight.w400,
+      color: textBlackColor,
+    ),
+  displaySmall: GoogleFonts.bonheurRoyale(
+      fontSize: 80.sp,
+      letterSpacing: -3.sp,
+      fontWeight: FontWeight.w400,
+      color: textBlackColor,
+      decorationColor: textBlackColor,
+      decoration: TextDecoration.underline
+    ),
+
 );

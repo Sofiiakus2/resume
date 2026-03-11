@@ -25,7 +25,7 @@ class EnterPoint extends StatelessWidget {
           children: [
             const MainPage(),
             const NavigationPanel(),
-            AboutMe(key: ScrollKeys.whoAmI),
+            const AboutMe(),
             BlocProvider(
               create: (_) => sl<ExperienceCubit>(),
               child: ExperiencePage(key: ScrollKeys.experience),
