@@ -1,5 +1,5 @@
 
-import '../../domain/entity/contact_entity.dart';
+import 'package:cv_portfolio/features/contacts/domain/entity/contact_entity.dart';
 
 sealed class ContactState {
   const ContactState();

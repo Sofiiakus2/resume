@@ -1,5 +1,5 @@
 
-import '../../../domain/entity/experience_entity.dart';
+import 'package:cv_portfolio/features/experience/domain/entity/experience_entity.dart';
 
 abstract interface class ExperienceLocalDatasource {
   List<ExperienceEntity> getExperiences();

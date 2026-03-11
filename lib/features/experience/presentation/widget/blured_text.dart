@@ -1,9 +1,8 @@
 import 'dart:ui';
 
+import 'package:cv_portfolio/core/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/theme.dart';
 
 class BluredText extends StatelessWidget {
   final String text;

@@ -1,12 +1,10 @@
 import 'package:cv_portfolio/core/theme.dart';
-
+import 'package:cv_portfolio/features/about/presentation/bloc/who_ami/who_ami_cubit.dart';
+import 'package:cv_portfolio/features/about/presentation/bloc/who_ami/who_ami_state.dart';
 import 'package:cv_portfolio/shared/presentation/widgets/bullet_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../bloc/who_ami/who_ami_cubit.dart';
-import '../../bloc/who_ami/who_ami_state.dart';
 
 class WhoAmiContent extends StatelessWidget {
   const WhoAmiContent({super.key});

@@ -1,5 +1,5 @@
 
-import '../../../domain/entity/skill_category_entity.dart';
+import 'package:cv_portfolio/features/skills/domain/entity/skill_category_entity.dart';
 
 abstract interface class SkillsLocalDatasource {
   List<SkillCategoryEntity> getSkills();

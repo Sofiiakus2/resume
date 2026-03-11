@@ -1,9 +1,8 @@
+import 'package:cv_portfolio/core/injection_container.dart';
 import 'package:cv_portfolio/core/routes/app_router.dart';
 import 'package:cv_portfolio/core/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'core/injection_container.dart';
 
 void main() async{
   await initDI();

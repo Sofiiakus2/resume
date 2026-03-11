@@ -1,6 +1,6 @@
 
-import '../entity/skill_category_entity.dart';
-import '../reporitory/skills_repository.dart';
+import 'package:cv_portfolio/features/skills/domain/entity/skill_category_entity.dart';
+import 'package:cv_portfolio/features/skills/domain/reporitory/skills_repository.dart';
 
 class GetSkillsUsecase {
   final SkillsRepository repository;

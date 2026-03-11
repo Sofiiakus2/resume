@@ -1,7 +1,6 @@
+import 'package:cv_portfolio/features/about/domain/entity/education_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../domain/entity/education_entity.dart';
 
 abstract interface class EducationLocalDatasource {
   List<EducationEntity> getEducation();

@@ -1,5 +1,5 @@
 
-import '../../domain/entity/experience_entity.dart';
+import 'package:cv_portfolio/features/experience/domain/entity/experience_entity.dart';
 
 sealed class ExperienceState {
   const ExperienceState();

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../domain/usecases/get_contact.dart';
-import 'contact_state.dart';
+import 'package:cv_portfolio/features/contacts/domain/usecases/get_contact.dart';
+import 'package:cv_portfolio/features/contacts/presentation/bloc/contact_state.dart';
 
 class ContactCubit extends Cubit<ContactState> {
   final GetContactUsecase _getContact;

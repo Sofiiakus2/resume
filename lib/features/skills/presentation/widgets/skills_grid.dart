@@ -1,8 +1,7 @@
+import 'package:cv_portfolio/features/skills/domain/entity/skill_category_entity.dart';
 import 'package:cv_portfolio/features/skills/presentation/widgets/skill_category_column.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../domain/entity/skill_category_entity.dart';
 
 class SkillsGrid extends StatelessWidget {
   final List<SkillCategoryEntity> skills;

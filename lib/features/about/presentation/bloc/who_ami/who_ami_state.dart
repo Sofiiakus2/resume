@@ -1,5 +1,5 @@
 
-import '../../../domain/entity/who_ami_entity.dart';
+import 'package:cv_portfolio/features/about/domain/entity/who_ami_entity.dart';
 
 sealed class WhoAmiState {
   const WhoAmiState();

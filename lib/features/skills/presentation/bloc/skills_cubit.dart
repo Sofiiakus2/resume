@@ -1,6 +1,6 @@
+import 'package:cv_portfolio/features/skills/domain/usecases/get_skills.dart';
+import 'package:cv_portfolio/features/skills/presentation/bloc/skills_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../domain/usecases/get_skills.dart';
-import 'skills_state.dart';
 
 class SkillsCubit extends Cubit<SkillsState> {
   final GetSkillsUsecase _getSkills;

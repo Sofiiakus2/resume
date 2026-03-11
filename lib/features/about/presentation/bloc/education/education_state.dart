@@ -1,4 +1,4 @@
-import '../../../domain/entity/education_entity.dart';
+import 'package:cv_portfolio/features/about/domain/entity/education_entity.dart';
 
 sealed class EducationState {
   const EducationState();

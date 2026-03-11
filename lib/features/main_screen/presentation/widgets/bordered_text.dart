@@ -1,6 +1,5 @@
+import 'package:cv_portfolio/core/theme.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/theme.dart';
 
 class BorderedText extends StatelessWidget {
   final String text;

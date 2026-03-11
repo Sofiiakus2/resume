@@ -1,12 +1,11 @@
 
 import 'package:cv_portfolio/features/skills/presentation/bloc/skills_cubit.dart';
 import 'package:cv_portfolio/features/skills/presentation/bloc/skills_state.dart';
+import 'package:cv_portfolio/features/skills/presentation/widgets/skills_grid.dart';
 import 'package:cv_portfolio/shared/presentation/widgets/blured_blob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../widgets/skills_grid.dart';
 
 
 class SkillsPage extends StatelessWidget {

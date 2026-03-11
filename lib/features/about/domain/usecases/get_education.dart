@@ -1,7 +1,7 @@
 
 
-import '../entity/education_entity.dart';
-import '../repository/education_repository.dart';
+import 'package:cv_portfolio/features/about/domain/entity/education_entity.dart';
+import 'package:cv_portfolio/features/about/domain/repository/education_repository.dart';
 
 class GetEducationUsecase {
   final EducationRepository repository;

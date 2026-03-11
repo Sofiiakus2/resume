@@ -1,8 +1,7 @@
 
+import 'package:cv_portfolio/features/experience/domain/usecases/get_experience.dart';
+import 'package:cv_portfolio/features/experience/presentation/bloc/experience_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../domain/usecases/get_experience.dart';
-import 'experience_state.dart';
 
 class ExperienceCubit extends Cubit<ExperienceState> {
   final GetExperiencesUsecase _getExperiences;

@@ -1,7 +1,6 @@
+import 'package:cv_portfolio/features/experience/presentation/widget/blured_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'blured_text.dart';
 
 class TitleView extends StatelessWidget {
   final String text;
