@@ -1,6 +1,7 @@
 import 'package:cv_portfolio/core/theme.dart';
 import 'package:cv_portfolio/features/about/presentation/bloc/who_ami/who_ami_cubit.dart';
 import 'package:cv_portfolio/features/about/presentation/bloc/who_ami/who_ami_state.dart';
+import 'package:cv_portfolio/features/about/presentation/widgets/who_am_i/typing_text.dart';
 import 'package:cv_portfolio/shared/presentation/widgets/bullet_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,8 +34,8 @@ class WhoAmiContent extends StatelessWidget {
               ),
               SizedBox(
                 width: 1900.w,
-                child: Text(
-                  data.description,
+                child: TypingText(
+                  text: data.description,
                   style: Theme.of(context).textTheme.bodyMedium,
                   textAlign: TextAlign.end,
                 ),
@@ -55,3 +56,4 @@ class WhoAmiContent extends StatelessWidget {
     );
   }
 }
+
