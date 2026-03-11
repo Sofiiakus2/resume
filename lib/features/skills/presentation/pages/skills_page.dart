@@ -46,7 +46,7 @@ class SkillsPage extends StatelessWidget {
               ),
             ],
           ),
-          BluredBlob(),
+          const BluredBlob(),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:cv_portfolio/core/injection_container.dart';
+import 'package:cv_portfolio/core/routes/skroll_keys.dart';
 import 'package:cv_portfolio/core/theme.dart';
 import 'package:cv_portfolio/features/about/presentation/bloc/education/education_cubit.dart';
 import 'package:cv_portfolio/features/about/presentation/bloc/who_ami/who_ami_cubit.dart';
@@ -17,16 +18,16 @@ class AboutMe extends StatelessWidget {
       color: primaryColor,
       child: Stack(
         children: [
-          BlurEffect(),
+          const BlurEffect(),
           Column(
             children: [
               BlocProvider(
                 create: (_) => sl<WhoAmiCubit>(),
-                child: const WhoAmiContent(),
+                child: WhoAmiContent(key: ScrollKeys.whoAmI),
               ),
               BlocProvider(
                 create: (_) => sl<EducationCubit>(),
-                child: const EducationContent(),
+                child: EducationContent(key: ScrollKeys.education),
               ),
             ],
           ),

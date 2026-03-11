@@ -1,4 +1,5 @@
 import 'package:cv_portfolio/core/injection_container.dart';
+import 'package:cv_portfolio/core/routes/skroll_keys.dart';
 import 'package:cv_portfolio/core/theme.dart';
 import 'package:cv_portfolio/features/about/presentation/pages/about_page.dart';
 import 'package:cv_portfolio/features/contacts/presentation/bloc/contact_cubit.dart';
@@ -22,12 +23,12 @@ class EnterPoint extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            MainPage(),
-            NavigationPanel(),
-            AboutMe(),
+            const MainPage(),
+            const NavigationPanel(),
+            AboutMe(key: ScrollKeys.whoAmI),
             BlocProvider(
               create: (_) => sl<ExperienceCubit>(),
-              child: const ExperiencePage(),
+              child: ExperiencePage(key: ScrollKeys.experience),
             ),
             Container(
               width: double.infinity,
@@ -36,11 +37,11 @@ class EnterPoint extends StatelessWidget {
             ),
             BlocProvider(
               create: (_) => sl<SkillsCubit>(),
-              child: const SkillsPage(),
+              child: SkillsPage(key: ScrollKeys.skills),
             ),
             BlocProvider(
               create: (_) => sl<ContactCubit>(),
-              child: const ContactBlock(),
+              child: ContactBlock(key: ScrollKeys.contacts),
             ),
           ],
         ),
