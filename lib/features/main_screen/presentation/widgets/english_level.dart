@@ -1,6 +1,7 @@
 import 'package:cv_portfolio/core/constants/changeble_personal_data.dart';
 import 'package:cv_portfolio/core/theme.dart';
 import 'package:cv_portfolio/features/main_screen/presentation/widgets/bordered_text.dart';
+import 'package:cv_portfolio/shared/presentation/widgets/effects/fade_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,16 +15,18 @@ class EnglishLevel extends StatelessWidget {
     return Positioned(
       top: topPosition,
       left: 70.w,
-      child: Row(
-        spacing: 10.w,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Text(
-            'English',
-            style: textTheme.headlineMedium?.copyWith(color: primaryColor),
-          ),
-          const BorderedText(text: PersonalData.englishLevel),
-        ],
+      child: FadeIn(
+        child: Row(
+          spacing: 10.w,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              'English',
+              style: textTheme.headlineMedium?.copyWith(color: primaryColor),
+            ),
+            const BorderedText(text: PersonalData.englishLevel),
+          ],
+        ),
       ),
     );
   }
