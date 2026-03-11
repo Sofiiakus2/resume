@@ -24,6 +24,7 @@ dependencies:
   get_it: ^9.2.1
   url_launcher: ^6.3.2
   solid_lints: ^0.3.2
+  visibility_detector: ^0.4.0+2
 
 
 dev_dependencies:
