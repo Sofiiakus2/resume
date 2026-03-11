@@ -48,7 +48,7 @@ class _MainPageState extends State<MainPage> {
                 padding: EdgeInsets.only(left: 70.0.w),
                 child: NameSection(textTheme: textTheme),
               ),
-              PhotoSector(),
+              const PhotoSector(),
               EnglishLevel(textTheme: textTheme, topPosition: topPosition),
               ResumeSection(textTheme: textTheme, topPosition: topPosition),
               ExperienceSection(textTheme: textTheme),

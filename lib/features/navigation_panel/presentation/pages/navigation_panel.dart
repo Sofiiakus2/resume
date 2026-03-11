@@ -14,7 +14,7 @@ class NavigationPanel extends StatelessWidget {
         backgroundColor: primaryColor,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 380.0.w, vertical: 15.h),
-          child: PagesList(),
+          child: const PagesList(),
         )
       ),
     );

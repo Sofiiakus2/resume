@@ -32,7 +32,6 @@ class _PagesListState extends State<PagesList> {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: _pages
           .map((page) => GestureDetector(
         onTap: () => _scrollTo(page.$2),

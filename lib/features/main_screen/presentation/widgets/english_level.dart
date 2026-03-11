@@ -22,7 +22,7 @@ class EnglishLevel extends StatelessWidget {
             'English',
             style: textTheme.headlineMedium?.copyWith(color: primaryColor),
           ),
-          BorderedText(text: PersonalData.englishLevel),
+          const BorderedText(text: PersonalData.englishLevel),
         ],
       ),
     );

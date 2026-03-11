@@ -43,7 +43,7 @@ class ExperiencePage extends StatelessWidget {
                           horizontal: 40.w,
                           vertical: 20.h,
                         ),
-                        child: Divider(thickness: 1, color: textBlackColor),
+                        child: const Divider(thickness: 1, color: textBlackColor),
                       ),
                   ],
                 ],

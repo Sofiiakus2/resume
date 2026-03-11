@@ -25,7 +25,6 @@ class EducationRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Всі widgets будуються тут — де є доступ до context
     final logo = Image.asset(logoPath, height: logoSize, width: logoSize);
 
     final info = Expanded(

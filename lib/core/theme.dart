@@ -15,7 +15,7 @@ ThemeData lightTheme() => ThemeData(
   useMaterial3: true,
   primaryColor: primaryColor,
   textTheme: textDesktopTheme(),
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
     color: backgroundPrimaryColor,
     scrolledUnderElevation: 0.0,
   ),
@@ -37,7 +37,7 @@ TextTheme textDesktopTheme() => TextTheme(
     shadows: [
       Shadow(
         color: shadowColor.withOpacity(0.21),
-        offset: Offset(12, 14),
+        offset: const Offset(12, 14),
         blurRadius: 2,
       ),
     ],

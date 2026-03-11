@@ -16,7 +16,7 @@ class ExperienceSection extends StatelessWidget {
         spacing: 10.w,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          BorderedText(text: PersonalData.yearsOfExperience),
+          const BorderedText(text: PersonalData.yearsOfExperience),
           Text(' years of commercial experience ', style: textTheme.titleSmall),
         ],
       ),
